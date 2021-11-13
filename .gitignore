@@ -6,3 +6,5 @@
 .ssh/*
 .aws/*
 .terraform/*
+*.terraform*
+
