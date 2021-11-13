@@ -16,6 +16,8 @@ COPY asdf-install-plugins /bin/asdf-install-plugins
 RUN git clone -b v0.8.1 https://github.com/asdf-vm/asdf.git /home/workspace/.asdf
 WORKDIR /home/workspace
 RUN echo '\nsource $HOME/.asdf/asdf.sh' >> /home/workspace/.bashrc
+RUN echo '\neval "$(ssh-agent -s)"' >> /home/workspace/.bashrc
+RUN echo '\nssh-add ~/.ssh/id_ed25519' >> /home/workspace/.bashrc
 COPY .tool-versions .tool-versions
 COPY setup.sh setup.sh
 COPY aws-profile-config .aws/config
