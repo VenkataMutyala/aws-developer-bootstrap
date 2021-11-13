@@ -3,3 +3,4 @@
 .openvscode-server/CachedExtensionVSIXs
 .openvscode-server/machineid
 .openvscode-server/machine*
+.ssh/*
