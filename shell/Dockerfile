@@ -9,8 +9,8 @@ FROM gitpod/openvscode-server:1.61.0
 USER root
 RUN apt-get -y update -q && apt-get install -y git curl unzip jq docker.io
 
-COPY  setup-ssh.sh /usr/bin/setup-ssh
 USER openvscode-server
+COPY setup-ssh.sh /usr/bin/setup-ssh
 COPY shasum /bin/shasum
 COPY asdf-install-plugins /bin/asdf-install-plugins
 RUN git clone -b v0.8.1 https://github.com/asdf-vm/asdf.git /home/workspace/.asdf
