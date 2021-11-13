@@ -5,6 +5,5 @@
 .openvscode-server/machine*
 .ssh/*
 .aws/*
-.terraform/*
 *.terraform*
 
